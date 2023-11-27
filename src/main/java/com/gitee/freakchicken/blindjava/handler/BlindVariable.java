@@ -107,7 +107,7 @@ public class BlindVariable {
     }
 
     private void obtainClassVariable(File file) throws FileNotFoundException {
-        String nameAsString = null;
+        String packageName = null;
         JavaParser javaParser = new JavaParser();
         ParseResult<CompilationUnit> parse = javaParser.parse(file);
         if (parse.isSuccessful()) {
@@ -117,12 +117,12 @@ public class BlindVariable {
             for (Node node : childNodes) {
                 if (node instanceof ImportDeclaration) {
                 } else if (node instanceof PackageDeclaration) {
-                    nameAsString = ((PackageDeclaration) node).getNameAsString();
+                    packageName = ((PackageDeclaration) node).getNameAsString();
                 } else if (node instanceof ClassOrInterfaceDeclaration) {
                     ClassOrInterfaceDeclaration classOrInterfaceDeclaration = (ClassOrInterfaceDeclaration) node;
                     String classOrInterfaceDeclarationNameAsString = classOrInterfaceDeclaration.getNameAsString();
                     List<FieldDeclaration> fields = classOrInterfaceDeclaration.getFields();
-                    String allName = nameAsString + "." + classOrInterfaceDeclarationNameAsString;
+                    String allName = packageName + "." + classOrInterfaceDeclarationNameAsString;
                     Map<String, String> classMap = new HashMap<String, String>();
                     for (FieldDeclaration fieldDeclaration : fields) {
                         NodeList<VariableDeclarator> variables = fieldDeclaration.getVariables();
