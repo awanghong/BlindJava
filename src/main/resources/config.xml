@@ -20,6 +20,8 @@
     <!-- 指定哪些java文件保持不变，不混淆。比如mybatis映射数据库的实体类、interface类-->
     <!--可以按 package class 来指定-->
     <excludeJavaFile>
+        <package>com.digital.cnzz.message.center.common</package>
+
         <!-- 此package下的所有类和子包的类都全部代码不混淆-->
         <!--  <package>com.gitee.freakchicken.dbapi.basic.domain</package>
           <package>com.gitee.freakchicken.dbapi.basic.dto</package>

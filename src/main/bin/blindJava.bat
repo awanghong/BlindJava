@@ -5,9 +5,9 @@ set conf_dir=%home%..\conf
 set lib_dir=%home%..\lib\*
 set log_dir=%home%..\logs
 
-java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.C_YrLQF3sy
-java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.C_RMoDBh4e
-java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.C_tlGFzJIA
-java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.C_NZyJv9pS
+java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.BlindVariable
+java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.BlindMethod
+java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.BlindClass
+java -classpath %conf_dir%;%lib_dir% com.gitee.freakchicken.blindjava.handler.BlindNote
 
 pause
