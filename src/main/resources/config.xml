@@ -1,10 +1,10 @@
 <config>
 
     <!--指定源代码所在的目录-->
-    <sourceDir>D:\git\blindjava-vip\</sourceDir>
+    <sourceDir>D:\readSource\</sourceDir>
 
     <!--指定最后生成的代码存放的目录-->
-    <targetDir>E:\blindjava\</targetDir>
+    <targetDir>D:\blindSource\</targetDir>
 
     <!--指定排除哪些目录下的文件，一般是排除非源代码的目录，比如.idea、 target目录、前端安装目录node_modules-->
     <!--注意必须是相对路径，不能填写绝对路径，相对于上面sourceDir的目录-->
